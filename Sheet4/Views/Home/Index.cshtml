@@ -1,0 +1,56 @@
+﻿@model Sheet4.Models.Order
+
+@using Sheet4.Models
+@{
+    ViewBag.Title = "Index2";
+
+}
+
+
+
+<h2>Welcome to StarSubs!</h2>
+
+
+<Form method="post">
+    @Html.DropDownList("type", new SelectList(Enum.GetValues(typeof(SubType))), "Enter a pizza type")
+
+
+    @Html.ValidationMessage("Pizza type is required")
+
+
+    @Html.DropDownList("size", new SelectList(Enum.GetValues(typeof(SubSize))), "Small")
+
+
+
+
+    @Html.ValidationMessage("Pizza size is required")
+
+    <br />
+    <br />
+
+    <p>Select a Meal Deal</p>
+
+    @Html.RadioButtonFor(m => m.deal, "none", new { @checked = true }) None
+
+    @Html.RadioButtonFor(m => m.deal, "chips") Drink and Chips
+
+    @Html.RadioButtonFor(m => m.deal, "cookies")Drink and Coockies
+
+
+    <br /><br />
+
+    <input type="submit" />
+
+
+</Form>
+
+
+
+
+<!--Html.DropDownListFor(c => c.type, Enum.GetValues(typeof(SubType)).Cast<SubType>
+    ().Select(c => new new
+
+    Html.ActionLink("Test to delete", "Receipt");
+
+    SelectList(Enum.GetValues(typeof(SubType))), "Select Type")
+    -->

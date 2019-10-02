@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Receipt";
+}
+
+<h2>StarSubs Receipt</h2>
+<h3>Today's Date: Wednesday, Sept</h3>
+<br />
+
+<table style="width:100%">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+
+    </tr>
+    <tr>
+        <td>Type of pizza:</td>
+        <td>@ViewBag.TypeName</td>
+
+    </tr>
+    <tr>
+        <td>Size of pizza</td>
+        <td>@ViewBag.SizeName</td>
+    </tr>
+    <tr>
+        <td>Type of Meal Deal</td>
+        <td>@ViewBag.DealName</td>
+    </tr>
+    <tr>
+        <td>Total Price of Sub:</td>
+        <td>@ViewBag.TotalPizza</td>
+    </tr>
+    <tr>
+        <td>Price of Meal Deal:</td>
+        <td>@ViewBag.TotalDeal</td>
+    </tr>
+
+    <br />
+
+    <tr>
+        <td>Cost:</td>
+        <td>@ViewBag.Cost</td>
+    </tr>
+    <tr>
+        <td>Tax:</td>
+        <td>@ViewBag.Tax</td>
+    </tr>
+    <tr>
+        <td>Total Due:</td>
+        <td>@ViewBag.Total</td>
+    </tr>
+
+
+
+</table>
+
+@Html.ActionLink("Place another order", "Index"); 
+
